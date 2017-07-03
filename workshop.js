@@ -21,10 +21,10 @@ function lastLetter(inputString) {
 }
 
 function letterAtPosition(inputString, position) {
-    if (inputString === undefined) {
+    if (inputString === undefined || position < 0) {
         return undefined;
     } else {
-        return inputString[inputString.charAt(position)];
+        return inputString.charAt(position);
     }
 }
 
@@ -82,18 +82,43 @@ function reverseString(inputString) {
 }
 
 function longestWord(inputString) {
-    
+    var splitInputString = inputString.split(' ');
+    for(var i = 0; i < splitInputString.length; i++) {
+       if(splitInputString[i].length > longWord.length) {
+           var longWord = splitInputString[i];
+        } else if(inputString === "") {
+        return "";
+        } else if(splitInputString.length === 1) {
+            return inputString;
+        } 
+    }  return longWord;
 }
 
 function capitalize(inputString) {
-
+return inputString.toLowerCase().split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
 }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+    var sum = 0
+    for (var i = 0; i <arrayOfNumbers.length; i++) {
+        if (arrayOfNumbers.length === 1) {
+            return arrayOfNumbers[0];
+        } else if (arrayOfNumbers.length === 0) {
+            return 0;
+        } else if(isNaN(arrayOfNumbers[i])){
+            return undefined;
+        } else {
+                sum += arrayOfNumbers[i];
+             } 
+    } return sum;
 }
 
+
+
 function uniqueElements(array1, array2) {
+    
 
 }
 
