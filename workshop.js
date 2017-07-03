@@ -82,7 +82,7 @@ function reverseString(inputString) {
 }
 
 function longestWord(inputString) {
-
+    
 }
 
 function capitalize(inputString) {
