@@ -1,6 +1,15 @@
 function firstLetter(inputString) {
-
+    if (inputString === undefined) {
+        return undefined;
+    } 
+    else {
+        return inputString[0];
+     }
 }
+    
+var answer = firstLetter("decodeMTL"); 
+    console.log(answer);
+
 
 function lastLetter(inputString) {
 
