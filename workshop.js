@@ -7,16 +7,21 @@ function firstLetter(inputString) {
      }
 }
     
-var answer = firstLetter("decodeMTL"); 
-    console.log(answer);
+/*var answer = firstLetter("decodeMTL"); 
+    console.log(answer);*/
 
 
 function lastLetter(inputString) {
+    if (inputString === undefined) {
+        return undefined;
+    } else {
+        return inputString[inputString.length - 1];
+    }
 
 }
 
 function letterAtPosition(inputString, position) {
-
+    
 }
 
 function addTwoNumbers(num1, num2) {
