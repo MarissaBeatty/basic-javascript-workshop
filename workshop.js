@@ -21,11 +21,27 @@ function lastLetter(inputString) {
 }
 
 function letterAtPosition(inputString, position) {
-    
+    if (inputString === undefined) {
+        return undefined;
+    } else {
+        return inputString[inputString.charAt(position)];
+    }
 }
 
 function addTwoNumbers(num1, num2) {
-
+    if(num1 === undefined) {
+        return undefined;
+    } else if(num2 === undefined) {
+        return undefined;
+    } else if(isNaN(num1)) {
+        return undefined;
+    } else if(isNaN(num2)) {
+        return undefined;
+    }
+    
+    else {
+        return num1 + num2;
+    }
 }
 
 function multiplyTwoNumbers(num1, num2) {
