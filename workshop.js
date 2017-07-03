@@ -38,14 +38,19 @@ function addTwoNumbers(num1, num2) {
     } else if(isNaN(num2)) {
         return undefined;
     }
-    
     else {
         return num1 + num2;
     }
 }
 
 function multiplyTwoNumbers(num1, num2) {
-
+    if(isNaN(num1, num2)) {
+        return undefined;
+    } else if(num1 === undefined || num2 === undefined) {
+        return undefined;
+    } else {
+        return num1*num2;
+    }
 }
 
 function calculator(operation, num1, num2) {
