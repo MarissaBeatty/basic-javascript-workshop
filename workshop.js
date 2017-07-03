@@ -54,11 +54,27 @@ function multiplyTwoNumbers(num1, num2) {
 }
 
 function calculator(operation, num1, num2) {
-
+    if(operation === "add") {
+        return num1 + num2;
+    } else if(operation === "sub") {
+        return num1 - num2;
+    } else if(operation === "mult") {
+        return num1 * num2;
+    } else if(operation === "div") {
+        return num1 / num2;
+    } else {
+        return undefined;
+    }
 }
 
 function repeatString(inputString, numRepetitions) {
-
+    if(numRepetitions <=0) {
+        return "";
+    } else if(inputString === undefined || numRepetitions === undefined) {
+        return undefined;
+    } else {
+    return inputString.repeat(numRepetitions);
+    }
 }
 
 function reverseString(inputString) {
