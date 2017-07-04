@@ -83,15 +83,19 @@ function reverseString(inputString) {
 
 function longestWord(inputString) {
     var splitInputString = inputString.split(' ');
-    for(var i = 0; i < splitInputString.length; i++) {
-       if(splitInputString[i].length > longWord.length) {
-           var longWord = splitInputString[i];
-        } else if(inputString === "") {
+    if(splitInputString.length === 0) {
         return "";
         } else if(splitInputString.length === 1) {
-            return inputString;
+        return inputString;
+        } else  {
+            var longWord = splitInputString[0];
+            for(var i = 0; i < splitInputString.length; i++) {
+                    
+                if (longWord.length <= splitInputString[i].length) {    
+                longWord = splitInputString[i];
+            }
+            } return longWord;
         } 
-    }  return longWord;
 }
 
 function capitalize(inputString) {
