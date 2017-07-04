@@ -122,9 +122,25 @@ function sumOfNumbers(arrayOfNumbers) {
 
 
 function uniqueElements(array1, array2) {
-    
+    if(array1.length < 0 && array2.length <0) {
+        return undefined;
+    } else {
+        var newArray = [];
+        for(var i = 0; i < array1.length; i++) {
+            for(var x = 0; x < array2.length; x++) {
+                if (array1[i] != array2[x]) {
+                    newArray.push(array1[i], array2[x]);
+                } else if (array1[i] === array2[x]) {
+                    return [];
+                }
+                }
+            }
+        }  return newArray;
+            
+        
+    }
 
-}
+
 
 function isPalindrome(inputString) {
 
